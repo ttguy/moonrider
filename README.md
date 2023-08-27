@@ -36,7 +36,17 @@ Big thanks to @elliottate for helping out with this!
 
 Have Node (< v12, recommended v11) and npm installed.
 
+To achieve the running of node v11 try using node version manager https://www.makeuseof.com/node-js-nvm-downgrade-previous-version/ . Once nvm is installed install ver 11.15.0 of node ...
+
 ```
+nvm install 11.15.0
+```
+Make sure you have a ssh key installed so git hub can authenticate you.
+see https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey#make-sure-you-have-a-key-that-is-being-used
+
+```
+git clone https://github.com/redsolver/moonrider.git
+cd moonrider
 npm install
 npm run start
 ```
