@@ -20,7 +20,12 @@ module.exports = {
   },
   devServer: {
     disableHostCheck: true,
-    hotOnly: true
+    hotOnly: true,
+      https: {
+          key: fs.readFileSync('/etc/letsencrypt/live/yahwehsflatearth.com/privkey.pem'),
+          cert: fs.readFileSync('/etc/letsencrypt/live/yahwehsflatearth.com/fullchain.pem'),          
+        },
+        public: 'https://yahwehsflatearth.com:3001/'
   },
   entry: {
     build: './src/index.js',
