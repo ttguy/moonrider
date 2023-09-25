@@ -33,12 +33,39 @@ Big thanks to @elliottate for helping out with this!
 
 Have Node (< v12, recommended v11) and npm installed.
 
+Best way to do this is to install  node version manager from https://github.com/nvm-sh/nvm
+
+use node version manager to install v11 of node:
+
 ```
+nvm install 11.15.0
+
+nvm use 11.15.0
+
+```
+check that you can authenticate at git hub
+
+```
+ssh -T git@github.com
+
+```
+success looks like "Hi ttguy! You've successfully authenticated, but GitHub does not provide shell access."
+
+Fail looks like "git@github.com: Permission denied (publickey)."
+
+If you fail to authenticate at git hub use this article to solve the problem https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey
+
+```
+cd moonrider
 npm install
 npm run start
 ```
 
-Then head to `localhost:3000` in your browser.
+Then head to `localhost:3002` in your browser.
+
+This version has changes in webpack.config.js  to make it accessible on ttguys https://yahwehsflatearth.com:3002/
+server.  It has paths to the certificates on his server and is set to run in https mode.
+And this config was conectable to via the occulus.
 
 ### Remixing and Forking
 
