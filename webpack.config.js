@@ -20,7 +20,12 @@ module.exports = {
   },
   devServer: {
     disableHostCheck: true,
-    hotOnly: true
+    hotOnly: true,
+      https: {
+          key: fs.readFileSync('/etc/ssl/certs/yahwehsflatearth.com/privkey6.pem'),
+          cert: fs.readFileSync('/etc/ssl/certs/yahwehsflatearth.com/fullchain6.pem'),          
+        },
+        public: 'https://yahwehsflatearth.com:3002/'
   },
   entry: {
     build: './src/index.js',
@@ -90,6 +95,7 @@ module.exports = {
     ]
   },
   resolve: {
-    modules: [path.join(__dirname, 'node_modules')]
+    modules: [path.join(__dirname, 'node_modules')],
+     extensions: ['.js', '.jsx']
   }
 };
